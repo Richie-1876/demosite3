@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* styling applied as per specificity, id most specific, class next and then tag */
+      P {
+        color: blue;
+      }
+      #para1 {
+        color: magenta;
+      }
+      .green {
+        color: green;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="green">Paragraphs</h1>
+    <!-- inline styling will overwrite everything class tag and id styling -->
+    <p id="para1" class="green" style="color: darkorange">
+      i am some text in a paragraph
+    </p>
+    <p class="green">i am some text in a paragraph</p>
+    <p>i am some text in a paragraph</p>
+    <p class="green">i am some text in a paragraph</p>
+    <p>i am some text in a paragraph</p>
+    <p class="green">i am some text in a paragraph</p>
+    <p>i am some text in a paragraph</p>
+    <p class="green">i am some text in a paragraph</p>
+    <p>i am some text in a paragraph</p>
+    <p>i am some text in a paragraph</p>
+    <button id="colorChangeBtn">Click Me</button>
+    <button id="makePink">Click Me</button>
+
+    <script>
+      let para1 = document.getElementById("para1");
+      console.log(para1);
+      console.log(typeof para1); //object
+      // check if the variable is of the type HTMLElement (returns a boolean)
+      console.log(para1 instanceof HTMLElement); // true
+      // get a collection of all the p tags in the html document (returns an HTML collection of HTML )
+      let paras = document.getElementsByTagName("p");
+      console.log(paras);
+      for (ptag of paras) {
+        console.log(ptag);
+      }
+      for (let i = 0; i < paras.length; i++) {
+        console.log(paras[i]);
+      }
+      console.log("********************************************");
+      let colorChange = document.getElementById("colorChangeBtn");
+      let makePink = document.getElementById("makePink");
+
+      makePink.addEventListener("click", makeGreenPink);
+
+      colorChange.addEventListener("click", changeColor);
+      function changeColor() {
+        for (let i = 0; i < paras.length; i++) {
+          paras[i].style.color = "rgb(255,0,0)";
+        }
+      }
+
+      function makeGreenPink() {
+        // get all elements on the page with the class of green.
+        let greenElements = document.getElementsByClassName("green");
+        //iterate through the html collection of elements with the class of green
+        for (const el of greenElements) {
+          el.style.color = "pink";
+        }
+      } // end of makeGreenPink
+    </script>
+  </body>
+</html>
