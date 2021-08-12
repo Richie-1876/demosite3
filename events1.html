@@ -5,14 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <script>
+      function documentLoaded() {
+        console.log("The page has loaded");
+        let btn = document.getElementById("clearBtn");
+        console.log(btn);
+      }
+      // this is adding an event listener to the window onload event.
+      // window.onload = documentLoaded;
+      window.addEventListener("load", documentLoaded);
+    </script>
   </head>
   <body>
-    <input onclick="clicked()" id="name" type="text" />
-    <button id="clear">Clear name box</button>
+    <input onclick="clicked()" id="name" type="text" placeholder="Type here" />
+    <button id="clearBtn">Clear name box</button>
     <script>
       let nameBox = document.getElementById("name");
-      let clear = document.getElementById("clear");
-      clear.addEventListener("click", clearBox);
+      let clearBtn = document.getElementById("clearBtn");
+      clearBtn.addEventListener("click", clearBox);
       nameBox.addEventListener("keyup", logToConsole);
       function clicked() {
         console.log("User clicked on input box");
@@ -23,6 +33,48 @@
       function clearBox() {
         nameBox.value = "";
       }
+      document.body.addEventListener("load", documentLoaded);
+      // function documentLoaded() {
+      //   console.log("The page has loaded");
+      //   let btn = document.getElementById("clearBtn");
+      //   console.log(btn);
+      // }
+
+      /*
+      const person = {
+        fName: "Jim",
+        lName: "White",
+        occupation: "Sports TV personality",
+        salary: 1000,
+        tvProgrammes: ["sportscene", "football first", "Scottish Rugby"],
+      };
+      // for (const programme in person.tvProgrammes) {
+      //   // if (
+      //   //   person.tvProgrammes.hasOwnProperty.call(
+      //   //     person.tvProgrammes,
+      //   //     programme
+      //   //   )
+      //   // ) {
+      //   const element = person.tvProgrammes[programme];
+      //   console.log(element);
+      // }
+      // // }
+      let str = "<h2>Person</h2>";
+      for (const key in person) {
+        if (person.hasOwnProperty.call(person, key)) {
+          const element = person[key];
+          if (key === "salary") {
+            str += `${key}: £${element}<br>`;
+          } else if (key === "tvProgrammes") {
+            for
+          } else {
+            str += `${key}: ${element}<br>`;
+          }
+        }
+      }
+      document.body.insertAdjacentHTML("beforeend", str);
+      console.log(str);
+      */
     </script>
   </body>
 </html>
