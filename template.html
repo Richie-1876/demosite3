@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Divs and structure</title>
+    <!-- External styling -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- internal styling -->
+    <style>
+      #main-nav a {
+        background-color: lightgreen;
+      }
+    </style>
+    <!-- always include this meta tag especially useful for responsive sites -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <script>
+      // JS should be placed at the bottom of the body as html is read top to bottom and you can't get a reference to something that isn't yet in the DOM (this returns null)
+      console.log("start of body");
+      var btn = document.getElementById("btn3");
+      console.log(btn);
+    </script>
+    <div id="wrapper">
+      <header id="main-header"></header>
+      <nav id="main-nav">
+        <ul>
+          <!-- Inline CSS -->
+          <li><a href="#" style="background-color: pink">Link 1</a></li>
+          <li><a href="#">Link 2</a></li>
+          <li><a href="#">Link 3</a></li>
+          <li><a href="#">Link 4</a></li>
+          <li><a href="#">Link 5</a></li>
+        </ul>
+      </nav>
+      <main id="main-content">
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum,
+          dolore! Ut, minus tempore dignissimos architecto quas quae neque
+          inventore quos eaque facere ipsam velit iusto expedita quam. Corporis,
+          soluta tenetur?
+        </p>
+        <button onclick="alert('Hello World')">Click Me 1</button>
+        <button onclick="console.log('hey universe')">Click Me 2</button>
+        <hr />
+        <button id="btn3">Click Me Again</button>
+        <button id="btn4">Click Me Again Again</button>
+      </main>
+      <footer
+        id="main-footer"
+        onclick="alert('you clicked the footer')"
+      ></footer>
+    </div>
+    <!--End of wrapper-->
+    <script src="js/myjs1.js"></script>
+  </body>
+</html>

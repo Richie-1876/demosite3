@@ -1,0 +1,73 @@
+* {
+  /* keep padding and border within the overall height and width defined (as apposed to the default behaviour adding to it) 
+  /* apply box-sizing to all block elements */
+  box-sizing: border-box;
+}
+body {
+  background-color: aquamarine;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+#wrapper {
+  width: 90%;
+  margin: 20px auto;
+}
+#main-header {
+  background-color: blueviolet;
+  height: 200px;
+}
+
+#main-nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+#main-nav li {
+  width: 20%;
+}
+#main-nav a {
+  background-color: rgb(18, 226, 157);
+  display: block;
+  text-decoration: none;
+  padding: 10px;
+  text-align: center;
+  font-size: 25px;
+  transition: all 0.3s;
+}
+#main-nav a:hover {
+  background-color: green !important;
+  color: white;
+}
+#main-content {
+  background-color: rgb(130, 182, 77);
+  height: 500px;
+  width: 80%;
+  /* margin-left: 10%; */
+  margin: 0 auto;
+  border: 5px solid black;
+  padding: 20px;
+}
+
+#main-footer {
+  background-color: blueviolet;
+  height: 200px;
+}
+@media screen and (max-width: 800px) {
+  body {
+    background-color: pink;
+  }
+} /*end of max-width 800px media query  */
+/* Create a css rule that is only applied when the condition is met. eg. screen width is 600px or less */
+@media screen and (max-width: 600px) {
+  #wrapper {
+    width: 100%;
+    margin: 0;
+  }
+
+  body {
+    background-color: yellow;
+  }
+} /*end of max-width 600px media query  */

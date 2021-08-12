@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#nav1 {
+  background-color: aqua;
+}
+/* for a ul nested inside an element with an id of #nav1 (more specific) */
+#nav1 ul {
+  background-color: lightsalmon;
+}
+#nav1 li {
+  background-color: aquamarine;
+}
+
+#nav1 a {
+  background-color: lightcyan;
+}
+#main-nav {
+  background-color: lightsalmon;
+}
+#main-nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#main-nav li {
+  width: 20%;
+  float: left;
+}
+
+#main-nav a {
+  background-color: lightgreen;
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+  text-align: center;
+  font-size: 25px;
+  color: darkslateblue;
+}
+
+#main-nav a:hover {
+  color: white;
+  background-color: green;
+}

@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: grey;
+}
+
+#div1,
+#div2,
+#div3,
+#div4 {
+  height: 200px;
+  width: 80%;
+  margin: 0px auto;
+}
+#div1 {
+  background-color: aqua;
+  /* position: relative;
+  top: 100px;
+  left: 60px; */
+}
+#div2 {
+  background-color: pink;
+  /* position: relative;
+  top: 100px; */
+}
+#div3 {
+  background-color: yellow;
+  /* position: absolute;
+  top: 2px; */
+}
+#div4 {
+  background-color: green;
+  /* position: absolute;
+  top: 50px;
+  left: 100px; */
+}

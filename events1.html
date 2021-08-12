@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input onclick="clicked()" id="name" type="text" />
+    <button id="clear">Clear name box</button>
+    <script>
+      let nameBox = document.getElementById("name");
+      let clear = document.getElementById("clear");
+      clear.addEventListener("click", clearBox);
+      nameBox.addEventListener("keyup", logToConsole);
+      function clicked() {
+        console.log("User clicked on input box");
+      }
+      function logToConsole() {
+        console.log(`${nameBox.value} used Key up event!!`);
+      }
+      function clearBox() {
+        nameBox.value = "";
+      }
+    </script>
+  </body>
+</html>

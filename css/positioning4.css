@@ -1,0 +1,31 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: lightgray;
+  height: 2000px;
+}
+p {
+  background-color: white;
+  width: 80%;
+  margin: 0 auto;
+  color: #ff0000;
+}
+#modal {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+
+  background-color: rgba(96, 54, 138, 0.4);
+}
+#pain {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 80px;
+  width: 80px;
+  background-color: aliceblue;
+  text-align: center;
+}

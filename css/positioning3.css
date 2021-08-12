@@ -1,0 +1,35 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: aquamarine;
+}
+
+div {
+  width: 80%;
+  height: 80%;
+  margin: 40px auto;
+  padding: 1px;
+}
+#div1 {
+  height: 500px;
+  background-color: beige;
+  position: relative;
+}
+#div2 {
+  background-color: lightcoral;
+}
+#div3 {
+  background-color: lightgreen;
+}
+#div4 {
+  background-color: lightskyblue;
+}
+#para1 {
+  background-color: aliceblue;
+  color: magenta;
+  width: 40px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
